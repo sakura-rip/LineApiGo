@@ -28,3 +28,5 @@ see example to get more imformation
 
 
 have fun :)
+
+Studying golang...
