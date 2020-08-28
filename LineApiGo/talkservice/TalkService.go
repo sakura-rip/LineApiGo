@@ -19409,7 +19409,7 @@ func (p *Location) String() string {
 }
 
 // Attributes:
-//  - _from
+//  - From_
 //  - To
 //  - ToType
 //  - ID
@@ -19429,7 +19429,7 @@ func (p *Location) String() string {
 //  - RelatedMessageServiceCode
 //  - AppExtensionType
 type Message struct {
-  _from string `thrift:"_from,1" db:"_from" json:"_from"`
+  From_ string `thrift:"from_,1" db:"from_" json:"from_"`
   To string `thrift:"to,2" db:"to" json:"to"`
   ToType ToType `thrift:"toType,3" db:"toType" json:"toType"`
   ID string `thrift:"id,4" db:"id" json:"id"`
@@ -19458,8 +19458,8 @@ func NewMessage() *Message {
 }
 
 
-func (p *Message) Get_from() string {
-  return p._from
+func (p *Message) GetFrom_() string {
+  return p.From_
 }
 
 func (p *Message) GetTo() string {
@@ -19762,7 +19762,7 @@ func (p *Message)  ReadField1(iprot thrift.TProtocol) error {
   if v, err := iprot.ReadString(); err != nil {
   return thrift.PrependError("error reading field 1: ", err)
 } else {
-  p._from = v
+  p.From_ = v
 }
   return nil
 }
@@ -19998,12 +19998,12 @@ func (p *Message) Write(oprot thrift.TProtocol) error {
 }
 
 func (p *Message) writeField1(oprot thrift.TProtocol) (err error) {
-  if err := oprot.WriteFieldBegin("_from", thrift.STRING, 1); err != nil {
-    return thrift.PrependError(fmt.Sprintf("%T write field begin error 1:_from: ", p), err) }
-  if err := oprot.WriteString(string(p._from)); err != nil {
-  return thrift.PrependError(fmt.Sprintf("%T._from (1) field write error: ", p), err) }
+  if err := oprot.WriteFieldBegin("from_", thrift.STRING, 1); err != nil {
+    return thrift.PrependError(fmt.Sprintf("%T write field begin error 1:from_: ", p), err) }
+  if err := oprot.WriteString(string(p.From_)); err != nil {
+  return thrift.PrependError(fmt.Sprintf("%T.from_ (1) field write error: ", p), err) }
   if err := oprot.WriteFieldEnd(); err != nil {
-    return thrift.PrependError(fmt.Sprintf("%T write field end error 1:_from: ", p), err) }
+    return thrift.PrependError(fmt.Sprintf("%T write field end error 1:from_: ", p), err) }
   return err
 }
 
