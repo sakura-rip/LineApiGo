@@ -1,5 +1,5 @@
 // Copyright (c) 2020 @Ch31212y
-// Version 1.1 bata
+// Version 1.1 beta
 // LastUpdate 2020/08/28
 
 package lineapigo
@@ -54,7 +54,7 @@ func GetUserAgent(appType string) string {
 
 // GetLineApplication This func will return string of X-Line-Application
 // @param appType(string) string of your choiced line application type
-// @return string of X-Line-Applicaiton
+// @return string of X-Line-Application
 func GetLineApplication(appType string) string {
 	switch appType {
 	case "LITE":

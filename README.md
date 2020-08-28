@@ -1,32 +1,38 @@
 # LineApiGo
-Copyright (c) 2020 @Ch31212y
-Version 1.1 bata
+Copyright (c) 2020 @Ch31212y\
+Version 1.1 bata\
 LastUpdate 2020/08/28
+
 
 
 Unofficial line api
 
-##Usage:
+
+
+## Usage:
 ```Go
 package main
 
 import "github.com/ch31212y/lineapigo"
 
 func main() {
-    // Create Instanct
+    // Create Instance
     bot := lineapigo.NewLineClient("LITE")
     //  Login with Qr Code
     bot.LoginWithQrCode()
 
 
-    // Create Instanct
+    // Create Instance
     bot1 := lineapigo.NewLineClient("IOS")
     // Login with AuthToken
     bot1.LoginWithAuthToken("token here")
-}```
-see example to get more imformation
+}
+```
+see example to get more information
 
 
 have fun :)
 
 Studying golang...
+
+GOたのちい

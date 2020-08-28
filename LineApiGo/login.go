@@ -1,5 +1,5 @@
 // Copyright (c) 2020 @Ch31212y
-// Version 1.1 bata
+// Version 1.1 beta
 // LastUpdate 2020/08/28
 
 package lineapigo
@@ -16,7 +16,7 @@ import (
 	talk "github.com/ch31212y/lineapigo/talkservice"
 )
 
-// LoginRequest strunct of qrlogin
+// LoginRequest struct of qrlogin
 type LoginRequest struct {
 	login1     *sqlogin.SecondaryQRCodeLoginServiceClient
 	loginCheck *sqlogin.SecondaryQRCodeLoginServiceClient
@@ -67,7 +67,7 @@ func (cl *LineClient) LoginWithAuthToken(token string) {
 // LoginWithQrCode >_<
 func (cl *LineClient) LoginWithQrCode() {
 	cl.createLogionSession1()
-	cl.CraeteQrSession()
+	cl.CreateQrSession()
 	cl.createLogionSession2()
 	url, er := cl.CreateQrCode()
 	if er != nil {

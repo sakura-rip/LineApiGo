@@ -1,5 +1,5 @@
 // Copyright (c) 2020 @Ch31212y
-// Version 1.1 bata
+// Version 1.1 beta
 // LastUpdate 2020/08/28
 
 package lineapigo
@@ -10,8 +10,8 @@ import (
 	sqlogin "github.com/ch31212y/lineapigo/secondaryqrcodeloginservice"
 )
 
-// CraeteQrSession create qr session for SecondaryQRLogin
-func (cl *LineClient) CraeteQrSession() (string, error) {
+// CreateQrSession create qr session for SecondaryQRLogin
+func (cl *LineClient) CreateQrSession() (string, error) {
 	req := sqlogin.NewCreateQrSessionRequest()
 	res, err := cl.qrLogin.login1.CreateSession(cl.ctx, req)
 	if err != nil {
@@ -30,7 +30,7 @@ func (cl *LineClient) CreateQrCode() (string, error) {
 	return res.CallbackUrl, err
 }
 
-// WaitForQrCodeVerified wait for qr code verfied
+// WaitForQrCodeVerified wait for qr code verified
 func (cl *LineClient) WaitForQrCodeVerified() {
 	req := sqlogin.NewCheckQrCodeVerifiedRequest()
 	req.AuthSessionId = cl.qrLogin.sessionID

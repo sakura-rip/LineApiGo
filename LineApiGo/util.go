@@ -1,5 +1,5 @@
 // Copyright (c) 2020 @Ch31212y
-// Version 1.1 bata
+// Version 1.1 beta
 // LastUpdate 2020/08/28
 
 package lineapigo
@@ -16,7 +16,7 @@ func IsStrInMap(str string, dic map[string]int32) bool {
 	return isIn
 }
 
-// JSONMention struct of json for perse Mention
+// JSONMention struct of json for parse Mention
 type JSONMention struct {
 	MENTION struct {
 		MENTIONEES []struct {
@@ -27,13 +27,13 @@ type JSONMention struct {
 	} `json:"MENTION"`
 }
 
-// PerseMention get list of mid
-func PerseMention(msg ser.Message) []string {
+// ParseMention get list of mid
+func ParseMention(msg ser.Message) []string {
 	var mentions []string
 	var strut JSONMention
 	// change map to byte
 	bytes, _ := json.Marshal(msg.ContentMetadata)
-	// Perse byte(map) to json struct
+	// Parse byte(map) to json struct
 	err := json.Unmarshal(bytes, &strut)
 	// if parse failed, return No element list
 	if err != nil {
@@ -45,7 +45,7 @@ func PerseMention(msg ser.Message) []string {
 	return mentions
 }
 
-// MyChat selfmade struct
+// MyChat self made struct
 type MyChat struct {
 	chatName              string
 	chatMid               string

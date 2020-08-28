@@ -1,5 +1,5 @@
 // Copyright (c) 2020 @Ch31212y
-// Version 1.1 bata
+// Version 1.1 beta
 // LastUpdate 2020/08/28
 
 package lineapigo
@@ -25,7 +25,7 @@ func (cl *LineClient) GenerateUserTicket() (string, error) {
 	return res.ID, err
 }
 
-// UpdateProfileName chagne profile name
+// UpdateProfileName change profile name
 func (cl *LineClient) UpdateProfileName(name string) error {
 	req := ser.NewUpdateProfileAttributesRequest()
 	content := ser.NewProfileContent()
@@ -174,7 +174,7 @@ func (cl *LineClient) GetChat(chatID string) (*ser.Chat, error) {
 	return nil, err
 }
 
-// UpdateChatName chagne chat name
+// UpdateChatName change chat name
 func (cl *LineClient) UpdateChatName(chatID, name string) error {
 	chat := &ser.Chat{}
 	chat.ChatName = name
@@ -241,7 +241,7 @@ func (cl *LineClient) CancelChatInvitation(groupID, targetMid string) error {
 	return err
 }
 
-// FindChatByTicket finc chat by ticket
+// FindChatByTicket find chat by ticket
 func (cl *LineClient) FindChatByTicket(ticketID string) (*ser.Chat, error) {
 	req := ser.NewFindChatByTicketRequest()
 	req.TicketId = ticketID
@@ -276,7 +276,7 @@ func (cl *LineClient) DisableE2ee() error {
 Contact
 */
 
-// FindAndAddContactsByMid add frined
+// FindAndAddContactsByMid add friend
 func (cl *LineClient) FindAndAddContactsByMid(targetMid string) (map[string]*ser.Contact, error) {
 	return cl.talk.FindAndAddContactsByMid(cl.ctx, cl.reqSeq, targetMid, ser.MIDType_MID, `{"screen":"homeTab","spec":"native"}`)
 }
@@ -291,7 +291,7 @@ func (cl *LineClient) GetContact(targetMid string) (*ser.Contact, error) {
 	return cl.talk.GetContact(cl.ctx, targetMid)
 }
 
-// CoteHan update displayname over ridden
+// CoteHan update display name over ridden
 func (cl *LineClient) CoteHan(mid, cote string) error {
 	return cl.talk.UpdateContactSetting(cl.ctx, cl.reqSeq, mid, ser.ContactFlag_CONTACT_SETTING_DISPLAY_NAME_OVERRIDE, cote)
 }
