@@ -28,10 +28,10 @@ var systemVersion map[string]string = map[string]string{
 }
 
 var appVersion map[string]string = map[string]string{
-	"LITE":   "2.14.0",
-	"MAC":    "5.24.1",
-	"CHROME": "2.3.9",
-	"IOS":    "10.9.0",
+	"LITE":   "2.16.0",
+	"MAC":    "6.6.0",
+	"CHROME": "2.4.3",
+	"IOS":    "11.4.1",
 }
 
 // GetUserAgent This func will return UserAgent for line
