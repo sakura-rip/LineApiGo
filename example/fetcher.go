@@ -7,7 +7,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/sakura-rip/lineapigo"
+	"github.com/sakura-rip/lineapigo/lineapigo"
 )
 
 func main() {
