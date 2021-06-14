@@ -1,4 +1,4 @@
-// Copyright (c) 2020 @Ch31212y
+// Copyright (c) 2020 @sakura-rip
 // Version 1.1 beta
 // LastUpdate 2020/08/28
 
@@ -7,7 +7,7 @@ package lineapigo
 import (
 	"log"
 
-	sqlogin "github.com/ch31212y/lineapigo/secondaryqrcodeloginservice"
+	sqlogin "github.com/sakura-rip/lineapigo/secondaryqrcodeloginservice"
 )
 
 // CreateQrSession create qr session for SecondaryQRLogin

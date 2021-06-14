@@ -1,5 +1,5 @@
 # LineApiGo
-Copyright (c) 2020 @Ch31212y\
+Copyright (c) 2020 @sakura-rip\
 Version 1.1 bata\
 LastUpdate 2020/08/28
 
@@ -13,7 +13,7 @@ Unofficial line api
 ```Go
 package main
 
-import "github.com/ch31212y/lineapigo"
+import "github.com/sakura-rip/lineapigo"
 
 func main() {
     // Create Instance

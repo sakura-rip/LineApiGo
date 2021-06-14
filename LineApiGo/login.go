@@ -1,4 +1,4 @@
-// Copyright (c) 2020 @Ch31212y
+// Copyright (c) 2020 @sakura-rip
 // Version 1.1 beta
 // LastUpdate 2020/08/28
 
@@ -11,9 +11,9 @@ import (
 	"net/http"
 
 	"github.com/apache/thrift/lib/go/thrift"
-	sqlogin "github.com/ch31212y/lineapigo/secondaryqrcodeloginservice"
-	ser "github.com/ch31212y/lineapigo/talkservice"
-	talk "github.com/ch31212y/lineapigo/talkservice"
+	sqlogin "github.com/sakura-rip/lineapigo/secondaryqrcodeloginservice"
+	ser "github.com/sakura-rip/lineapigo/talkservice"
+	talk "github.com/sakura-rip/lineapigo/talkservice"
 )
 
 // LoginRequest struct of qrlogin
