@@ -17,7 +17,7 @@ var authRegistration string = "/api/v4p/rs"
 var newRegistration string = "/acct/lp/lgn/sq/v1"
 var secondaryQrLogin string = "/acct/lgn/sq/v1"
 
-var systemName string = "LineApiGo"
+var systemName string = "lineapigo"
 
 var systemVersion map[string]string = map[string]string{
 	"LITE":   "10.0",
