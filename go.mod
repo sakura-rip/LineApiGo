@@ -1,4 +1,4 @@
-module github.com/sakura-rip/line-api-go
+module github.com/sakura-rip/lineapigo
 
 go 1.15
 
