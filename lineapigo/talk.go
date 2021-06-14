@@ -15,8 +15,8 @@ PROFILE FUNCTION
 // GetProfile return the object of Profile
 func (cl *LineClient) GetProfile() (*ser.Profile, error) {
 	prof, err := cl.talk.GetProfile(cl.ctx, ser.SyncReason_UNKNOWN)
-	cl.data.profile = prof
-	return cl.data.profile, err
+	cl.Data.Profile = prof
+	return cl.Data.Profile, err
 }
 
 // GenerateUserTicket generate user ticket
@@ -25,7 +25,7 @@ func (cl *LineClient) GenerateUserTicket() (string, error) {
 	return res.ID, err
 }
 
-// UpdateProfileName change profile name
+// UpdateProfileName change Profile name
 func (cl *LineClient) UpdateProfileName(name string) error {
 	req := ser.NewUpdateProfileAttributesRequest()
 	content := ser.NewProfileContent()

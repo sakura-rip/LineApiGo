@@ -25,10 +25,10 @@ type LoginRequest struct {
 
 // SavedInfo struct of saved
 type SavedInfo struct {
-	allChatMids []string
-	allChatInfo map[string]ser.Chat
-	friendmids  []string
-	profile     *talk.Profile
+	AllChatMids []string
+	AllChatInfo map[string]ser.Chat
+	FriendMids  []string
+	Profile     *talk.Profile
 }
 
 // LineClient struct of line
@@ -43,7 +43,7 @@ type LineClient struct {
 	reqSeqMessage map[string]int32
 	globalRev     int64
 	individualRev int64
-	data          SavedInfo
+	Data          SavedInfo
 }
 
 // NewLineClient return new LineClient
